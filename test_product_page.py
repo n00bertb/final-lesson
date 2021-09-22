@@ -64,7 +64,7 @@ def test_guest_can_add_product_to_basket(browser, link):
 @pytest.mark.need_review      
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
-    page = BasketPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес 
+    page = ProductPage(browser, link)   # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес 
     page.open()                      # открываем страницу
     page.go_to_basket_page()        # переходим в корзину
     page.check_emty_basket()        #проверяем корзину на пустоту
